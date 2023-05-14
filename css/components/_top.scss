@@ -1,0 +1,64 @@
+.top {
+  position: relative;
+  padding: 96px 0;
+  height: 845px;
+
+  &::after {
+    @include before;
+    top: 96px;
+    right: 0;
+    height: 650px;
+    width: 1295px;
+    background: url(../img/top-bg.png) center/cover;
+  }
+
+  &__logo {
+    position: absolute;
+    top: 70px;
+    left: 60px;
+
+    img {
+      width: 145px;
+      height: 100px;
+      object-fit: contain;
+    }
+  }
+
+  .container {
+    height: 100%;
+    @include flex(center, flex-start);
+    z-index: 2;
+  }
+
+  &__content {
+    padding: 0 105px;
+    width: 555px;
+    height: 425px;
+    background: #fff;
+    @include flex(flex-start, center, column, 30px);
+  }
+
+  hr {
+    width: 594px;
+    height: 14px;
+    background: var(--gray);
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 58px;
+    letter-spacing: 0.2em;
+  }
+
+  &__link {
+    color: var(--gray);
+    font-size: 24px;
+    font-weight: 500;
+    @include times;
+    transition: 0.3s;
+    &:hover {
+      color: var(--accent);
+    }
+  }
+}

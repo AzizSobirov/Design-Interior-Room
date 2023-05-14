@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Yeseva+One&display=swap");
+@import url("https://fonts.cdnfonts.com/css/times-new-roman");
+:root {
+  --text-color: #373f48;
+  --accent: #da9e81;
+  --gray: #c1c1c1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  color: var(--text-color);
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+input,
+select,
+hr,
+button,
+textarea,
+iframe {
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 1280px) {
+  .container {
+    padding: 0 25px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 0 15px;
+  }
+}
+@media screen and (max-width: 340px) {
+  .container {
+    padding: 0 10px;
+  }
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 96px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0px;
+}
+.nav .container {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 120px;
+}
+.nav__link {
+  height: 100%;
+  font-size: 32px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0px;
+}
+
+.top {
+  position: relative;
+  padding: 96px 0;
+  height: 845px;
+}
+.top::after {
+  position: absolute;
+  content: "";
+  top: 96px;
+  right: 0;
+  height: 650px;
+  width: 1295px;
+  background: url(../img/top-bg.png) center/cover;
+}
+.top__logo {
+  position: absolute;
+  top: 70px;
+  left: 60px;
+}
+.top__logo img {
+  width: 145px;
+  height: 100px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.top .container {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0px;
+  z-index: 2;
+}
+.top__content {
+  padding: 0 105px;
+  width: 555px;
+  height: 425px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 30px;
+}
+.top hr {
+  width: 594px;
+  height: 14px;
+  background: var(--gray);
+}
+.top__title {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 58px;
+  letter-spacing: 0.2em;
+}
+.top__link {
+  color: var(--gray);
+  font-size: 24px;
+  font-weight: 500;
+  font-family: "Times New Roman", sans-serif;
+  transition: 0.3s;
+}
+.top__link:hover {
+  color: var(--accent);
+}/*# sourceMappingURL=app.css.map */
