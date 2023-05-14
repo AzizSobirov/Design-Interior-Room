@@ -3,6 +3,17 @@
   padding: 96px 0;
   height: 845px;
 
+  &.bg-none {
+    height: 620px;
+    &::after {
+      display: none;
+    }
+
+    .top__title {
+      margin-left: 220px;
+    }
+  }
+
   &::after {
     @include before;
     top: 96px;

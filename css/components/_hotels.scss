@@ -1,0 +1,102 @@
+.hotel {
+  position: relative;
+  padding: 125px 0;
+  background-color: #dbdbdb;
+
+  &::before {
+    @include before;
+    width: 20px;
+    height: calc(100% + 240px);
+    left: 835px;
+    top: -240px;
+    background: #c1c1c1;
+  }
+
+  .container {
+    @include flex(center, center, column, 115px);
+  }
+
+  &__card {
+    width: 100%;
+    height: 410px;
+    @include flex(stretch);
+    &.reversed {
+      flex-direction: row-reverse;
+
+      .hotel__title {
+        right: 40px;
+        left: auto;
+      }
+    }
+
+    &:nth-child(odd) {
+      transform: translateX(-100px);
+    }
+    &:nth-child(even) {
+      transform: translateX(100px);
+    }
+  }
+
+  &__img {
+    position: relative;
+    flex: 1 0 auto;
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__title {
+    position: absolute;
+    bottom: 30px;
+    left: 40px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 43px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.2em;
+    color: #ffffff;
+  }
+
+  &__about {
+    padding: 0 25px;
+    width: 320px;
+    background: #fff;
+    @include flex(flex-start, center, column, 20px);
+
+    span {
+      @include flex(center, flex-start, row, 20px);
+    }
+  }
+
+  &__text {
+    @include yeseva;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    color: #7a838c;
+  }
+
+  &__btn {
+    margin-top: 10px;
+    width: 100%;
+    height: 60px;
+    color: #fff;
+    font-size: 20px;
+    letter-spacing: 0.05em;
+    @include yeseva;
+    background: var(--accent);
+    @include flex;
+    transition: 0.35s;
+
+    &:hover {
+      color: var(--accent);
+      background: #fff;
+      box-shadow: 0 0 0 3px var(--accent);
+    }
+  }
+}

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="/css/app.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="nav">
+      <div class="container">
+        <a href="#" class="nav__logo">
+          <img src="./img/logo.png" alt="" />
+        </a>
+        <div class="nav__list">
+          <a href="#" class="nav__link">Цена</a>
+          <a href="#" class="nav__link">Портфолио</a>
+          <a href="#" class="nav__link">Контакты</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Popups -->
+    <div class="popup">
+      <div class="popup__bg" onclick="closePopup()"></div>
+      <div class="popup__content">
+        <img
+          onclick="closePopup()"
+          class="popup-close"
+          src="/img/close.svg"
+          alt=""
+        />
+        <img class="popup-img" src="/img/popup-img.png" alt="" />
+
+        <div class="popup-form">
+          <form onsubmit="return submitForm()">
+            <input type="email" placeholder="Ваш E-MAIL" required />
+            <input
+              type="text"
+              id="number"
+              placeholder="Ваш номер телефона"
+              required
+            />
+            <button type="submit">Отправить</button>
+          </form>
+        </div>
+
+        <div class="popup-success">
+          <h2>Заявка успешно отправлена</h2>
+          <p>Наши менеджеры свяжутся с вами в течение 24 часов</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Top Section -->
+    <section class="top bg-none">
+      <!-- logo -->
+      <div class="top__logo">
+        <img src="/img/logo.png" alt="logo" />
+      </div>
+
+      <!-- content -->
+      <div class="container">
+        <div class="top__title">
+          ПОРТФОЛИО
+        </div>
+      </div>
+    </section>
+
+    <!-- Hotels -->
+    <section class="hotel">
+      <div class="container">
+        <div class="hotel__card">
+          <div class="hotel__img">
+            <img src="/img/hotel-1.png" alt="" />
+            <div class="hotel__title">Neva Tovers, 75</div>
+          </div>
+          <div class="hotel__about">
+            <div class="hotel__text">
+              Максимальное использование пространства
+            </div>
+            <span>
+              <img src="./img/bed.png" alt="" />
+              <div class="hotel__text">5 спальных мест</div>
+            </span>
+            <span>
+              <img src="./img/wash.png" alt="" />
+              <div class="hotel__text">1 душевая</div>
+            </span>
+            <span>
+              <img src="./img/bath.png" alt="" />
+              <div class="hotel__text">1 ванная комната</div>
+            </span>
+            <a href="#" class="hotel__btn">Просмотр</a>
+          </div>
+        </div>
+
+        <div class="hotel__card reversed">
+          <div class="hotel__img">
+            <img src="/img/hotel-2.png" alt="" />
+            <div class="hotel__title">Spain, Monte House</div>
+          </div>
+          <div class="hotel__about">
+            <div class="hotel__text">
+              Уютная вилла с открытой террасой
+            </div>
+            <span>
+              <img src="./img/bed.png" alt="" />
+              <div class="hotel__text">10 спальных мест</div>
+            </span>
+            <span>
+              <img src="./img/wash.png" alt="" />
+              <div class="hotel__text">7 душевая</div>
+            </span>
+            <span>
+              <img src="./img/bath.png" alt="" />
+              <div class="hotel__text">4 ванная комната</div>
+            </span>
+            <a href="#" class="hotel__btn">Просмотр</a>
+          </div>
+        </div>
+
+        <div class="hotel__card">
+          <div class="hotel__img">
+            <img src="/img/hotel-3.png" alt="" />
+            <div class="hotel__title">Moscow-city</div>
+          </div>
+          <div class="hotel__about">
+            <div class="hotel__text">
+              Взглянуть на мир с высоты птичьего полета
+            </div>
+            <span>
+              <img src="./img/bed.png" alt="" />
+              <div class="hotel__text">5 спальных мест</div>
+            </span>
+            <span>
+              <img src="./img/wash.png" alt="" />
+              <div class="hotel__text">3 душевая</div>
+            </span>
+            <span>
+              <img src="./img/bath.png" alt="" />
+              <div class="hotel__text">3 ванная комната</div>
+            </span>
+            <a href="#" class="hotel__btn">Просмотр</a>
+          </div>
+        </div>
+
+        <div class="hotel__card reversed">
+          <div class="hotel__img">
+            <img src="/img/hotel-4.png" alt="" />
+            <div class="hotel__title">Neva Tovers, 75</div>
+          </div>
+          <div class="hotel__about">
+            <div class="hotel__text">
+              Максимальное использование пространства
+            </div>
+            <span>
+              <img src="./img/bed.png" alt="" />
+              <div class="hotel__text">5 спальных мест</div>
+            </span>
+            <span>
+              <img src="./img/wash.png" alt="" />
+              <div class="hotel__text">1 душевая</div>
+            </span>
+            <span>
+              <img src="./img/bath.png" alt="" />
+              <div class="hotel__text">1 ванная комната</div>
+            </span>
+            <a href="#" class="hotel__btn">Просмотр</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Оставить заявку -->
+    <footer class="footer">
+      <div class="container">
+        <!-- submit application -->
+        <div class="submit" onclick="openForm()">
+          <div class="submit__title">Оставить заявку</div>
+          <div class="submit__desc">
+            Позвоните нам или оставьте ваши контактные данные
+          </div>
+        </div>
+
+        <!-- content -->
+        <div class="content">
+          <div class="wrapper">
+            <div class="contacts">
+              <a href="#"> +7 988 736 20 56 </a>
+              <a href="#"> INFO@DESIGN-INTER.RU</a>
+            </div>
+            <div class="networks">
+              <a href="#">
+                <img src="/img/instagram.png" alt="" />
+              </a>
+              <a href="#">
+                <img src="/img/twitter.png" alt="" />
+              </a>
+              <a href="#">
+                <img src="/img/facebook.png" alt="" />
+              </a>
+              <a href="#">
+                <img src="/img/pinterest.png" alt="" />
+              </a>
+            </div>
+          </div>
+          <img class="content__logo" src="/img/logo.png" alt="" />
+        </div>
+      </div>
+    </footer>
+
+    <!-- script -->
+    <script src="/js/app.js"></script>
+  </body>
+</html>

@@ -1,5 +1,6 @@
-.application {
-  padding: 0 0 125px 0;
+.application,
+.footer {
+  padding: 0 0 125px;
 
   .container {
     @include flex(center, center, column, 60px);
@@ -93,4 +94,9 @@
       }
     }
   }
+}
+
+.footer {
+  padding: 125px 0;
+  background: url(../img/footer-bg.png) top/cover;
 }
