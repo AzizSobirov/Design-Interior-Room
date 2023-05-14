@@ -2,6 +2,12 @@
   position: relative;
   padding: 125px 0;
   background-color: #dbdbdb;
+  @media screen and (max-width: 768px) {
+    padding: 40px 0;
+  }
+  @media screen and (max-width: 540px) {
+    padding: 25px 0;
+  }
 
   &::before {
     @include before;
@@ -10,10 +16,23 @@
     left: 835px;
     top: -240px;
     background: #c1c1c1;
+
+    @media screen and (max-width: 1024px) {
+      left: 40%;
+    }
   }
 
   .container {
     @include flex(center, center, column, 120px);
+    @media screen and (max-width: 1024px) {
+      gap: 60px;
+    }
+    @media screen and (max-width: 768px) {
+      gap: 40px;
+    }
+    @media screen and (max-width: 540px) {
+      gap: 20px;
+    }
   }
 
   &__item {
@@ -22,6 +41,9 @@
     width: 100%;
     background: #373f48;
     @include flex(flex-start, center, column, 20px);
+    @media screen and (max-width: 1024px) {
+      padding: 0 20px;
+    }
   }
 
   &__title {
@@ -43,6 +65,10 @@
     letter-spacing: 0.2em;
     color: #ffffff;
     @include yeseva;
+
+    @media screen and (max-width: 1024px) {
+      font-size: 14px;
+    }
   }
 
   &__list {
@@ -52,7 +78,7 @@
     &-item {
       padding: 20px 0;
       width: 100%;
-      @include flex(center, space-between);
+      @include flex(center, space-between, row, 20px);
       border-bottom: 5px solid #c1c1c1;
     }
   }
@@ -69,6 +95,16 @@
     border: 7px solid var(--accent);
     transition: 0.3s;
     @include flex;
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      font-size: 24px;
+    }
+
+    @media screen and (max-width: 640px) {
+      margin-top: 20px;
+      font-size: 16px;
+    }
 
     &:hover {
       color: #fff;

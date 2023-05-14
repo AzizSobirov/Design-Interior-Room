@@ -9,11 +9,21 @@
     height: 885px;
     background: url(../img/services-logo.png) center/cover;
     z-index: 2;
+
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
   }
 
   .container {
     padding: 100px 0;
     @include flex(flex-start, flex-start, column, 25px);
+    @media screen and (max-width: 768px) {
+      padding: 40px 0;
+    }
+    @media screen and (max-width: 540px) {
+      padding: 20px 0;
+    }
 
     &::before {
       @include before;
@@ -31,6 +41,12 @@
     height: 450px;
     z-index: 2;
     @include flex(center, flex-start);
+
+    @media screen and (max-width: 768px) {
+      height: auto;
+      align-items: flex-start;
+      flex-direction: column-reverse;
+    }
   }
 
   &__text {
@@ -41,6 +57,12 @@
     background: #fff;
     @include flex(flex-start, center, column, 20px);
     z-index: 2;
+
+    @media screen and (max-width: 768px) {
+      padding: 40px 25px;
+      max-width: 100%;
+      height: auto;
+    }
 
     &:hover {
       .services__arrow {
@@ -56,6 +78,11 @@
     line-height: 43px;
     letter-spacing: 0.14em;
 
+    @media screen and (max-width: 640px) {
+      font-size: 24px;
+      line-height: 26px;
+    }
+
     .services__arrow {
       right: -120px;
       bottom: -5px;
@@ -67,6 +94,11 @@
     color: #929292;
     font-size: 24px;
     @include times;
+
+    @media screen and (max-width: 640px) {
+      font-size: 16px;
+      line-height: 18px;
+    }
 
     .services__arrow {
       right: -140px;
@@ -86,6 +118,11 @@
     width: 920px;
     height: 100%;
 
+    @media screen and (max-width: 768px) {
+      position: relative;
+      width: 100%;
+    }
+
     img {
       height: 100%;
       width: 100%;
@@ -93,8 +130,3 @@
     }
   }
 }
-
-// .top,
-// .services {
-//   display: none;
-// }

@@ -8,6 +8,11 @@
   transition: 0.35s;
   z-index: 3;
 
+  @media screen and (max-width: 640px) {
+    padding-bottom: 10px;
+    height: auto;
+  }
+
   &.sticky {
     background: #fff;
 
@@ -19,12 +24,24 @@
   .container {
     height: 100%;
     @include flex(center, space-between, row, 20px);
+    @media screen and (max-width: 640px) {
+      flex-direction: column;
+      gap: 15px;
+    }
   }
 
   &__logo {
     height: 70px;
     opacity: 0;
     transition: 0.35s;
+
+    @media screen and (max-width: 1280px) {
+      opacity: 1;
+    }
+    @media screen and (max-width: 640px) {
+      height: 50px;
+    }
+
     img {
       height: 100%;
       object-fit: contain;
@@ -33,6 +50,13 @@
 
   &__list {
     @include flex(center, flex-end, row, 180px);
+
+    @media screen and (max-width: 1280px) {
+      gap: 80px;
+    }
+    @media screen and (max-width: 768px) {
+      gap: 40px;
+    }
   }
 
   &__link {
@@ -40,6 +64,12 @@
     font-size: 32px;
     @include flex;
     transition: 0.3s;
+    @media screen and (max-width: 768px) {
+      font-size: 24px;
+    }
+    @media screen and (max-width: 640px) {
+      font-size: 16px;
+    }
     &:hover {
       color: var(--accent);
     }

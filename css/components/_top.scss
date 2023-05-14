@@ -2,15 +2,28 @@
   position: relative;
   padding: 96px 0;
   height: 845px;
+  @media screen and (max-width: 768px) {
+    padding: 0;
+    height: 800px;
+  }
 
   &.bg-none {
     height: 620px;
+
+    @media screen and (max-width: 640px) {
+      height: 440px;
+    }
+
     &::after {
       display: none;
     }
 
     .top__title {
       margin-left: 220px;
+
+      @media screen and (max-width: 640px) {
+        margin-left: 0;
+      }
     }
   }
 
@@ -27,6 +40,11 @@
     position: absolute;
     top: 70px;
     left: 60px;
+    z-index: 2;
+
+    @media screen and (max-width: 1280px) {
+      display: none;
+    }
 
     img {
       width: 145px;
@@ -47,12 +65,27 @@
     height: 425px;
     background: #fff;
     @include flex(flex-start, center, column, 30px);
+
+    @media screen and (max-width: 1280px) {
+      padding: 0 50px;
+    }
+    @media screen and (max-width: 768px) {
+      padding: 0 25px;
+      width: 100%;
+    }
+    @media screen and (max-width: 540px) {
+      padding: 30px 15px;
+      height: auto;
+    }
   }
 
   hr {
     width: 594px;
     height: 14px;
     background: var(--gray);
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
   }
 
   &__title {
@@ -60,6 +93,11 @@
     font-size: 48px;
     line-height: 58px;
     letter-spacing: 0.2em;
+
+    @media screen and (max-width: 640px) {
+      font-size: 36px;
+      line-height: 40px;
+    }
   }
 
   &__link {
