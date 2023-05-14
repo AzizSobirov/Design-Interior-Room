@@ -176,6 +176,7 @@ iframe {
   justify-content: center;
   gap: 0px;
   z-index: 9;
+  display: none;
 }
 .popup__bg {
   position: absolute;

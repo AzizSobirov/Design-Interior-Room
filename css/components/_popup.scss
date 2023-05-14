@@ -6,7 +6,7 @@
   width: 100%;
   @include flex;
   z-index: 9;
-  // display: none;
+  display: none;
 
   &__bg {
     position: absolute;
