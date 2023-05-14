@@ -1,0 +1,67 @@
+.stages {
+  position: relative;
+  padding: 125px 0;
+  background-color: #dbdbdb;
+
+  .container {
+    max-width: 1280px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  &__item {
+    position: relative;
+    padding: 25px 20px;
+    background: #fff;
+    @include flex(flex-start, flex-start, column, 10px);
+  }
+
+  &__number {
+    @include yeseva;
+    font-size: 48px;
+    line-height: 55px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.005em;
+    @include flex(center, flex-start);
+    color: #928e8e;
+  }
+
+  .line {
+    position: absolute;
+    width: 280px;
+    height: 4px;
+    right: 0;
+    background: #da9e81;
+    @include flex(center, flex-start);
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -20px;
+      height: 14px;
+      width: 14px;
+      background: var(--accent);
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.075em;
+
+    color: #575353;
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: 0.2em;
+    color: #928a8a;
+  }
+}

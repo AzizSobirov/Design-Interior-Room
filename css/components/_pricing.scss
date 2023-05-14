@@ -1,0 +1,78 @@
+.pricing {
+  position: relative;
+  padding: 125px 0;
+  background-color: #dbdbdb;
+
+  &::before {
+    @include before;
+    width: 20px;
+    height: calc(100% + 240px);
+    left: 835px;
+    top: -240px;
+    background: #c1c1c1;
+  }
+
+  .container {
+    @include flex(center, center, column, 120px);
+  }
+
+  &__item {
+    padding: 0 115px;
+    height: 580px;
+    width: 100%;
+    background: #373f48;
+    @include flex(flex-start, center, column, 20px);
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 43px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.2em;
+    color: #ffffff;
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.2em;
+    color: #ffffff;
+    @include yeseva;
+  }
+
+  &__list {
+    width: 100%;
+    @include flex(center, center, column);
+
+    &-item {
+      padding: 20px 0;
+      width: 100%;
+      @include flex(center, space-between);
+      border-bottom: 5px solid #c1c1c1;
+    }
+  }
+
+  &__btn {
+    margin-top: 40px;
+    width: 680px;
+    height: 85px;
+    font-weight: 700;
+    font-size: 28px;
+    text-align: center;
+    letter-spacing: 0.075em;
+    color: #ffffff;
+    border: 7px solid var(--accent);
+    transition: 0.3s;
+    @include flex;
+
+    &:hover {
+      color: #fff;
+      background: var(--accent);
+    }
+  }
+}

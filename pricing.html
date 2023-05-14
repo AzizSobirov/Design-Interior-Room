@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ЦЕНЫ</title>
+    <link rel="stylesheet" href="/css/app.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="nav">
+      <div class="container">
+        <a href="#" class="nav__logo">
+          <img src="./img/logo.png" alt="" />
+        </a>
+        <div class="nav__list">
+          <a href="/pricing.html" class="nav__link">Цена</a>
+          <a href="/portfolio.html" class="nav__link">Портфолио</a>
+          <a href="#" class="nav__link">Контакты</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Popups -->
+    <div class="popup">
+      <div class="popup__bg" onclick="closePopup()"></div>
+      <div class="popup__content">
+        <img
+          onclick="closePopup()"
+          class="popup-close"
+          src="/img/close.svg"
+          alt=""
+        />
+        <img class="popup-img" src="/img/popup-img.png" alt="" />
+
+        <div class="popup-form">
+          <form onsubmit="return submitForm()">
+            <input type="email" placeholder="Ваш E-MAIL" required />
+            <input
+              type="text"
+              id="number"
+              placeholder="Ваш номер телефона"
+              required
+            />
+            <button type="submit">Отправить</button>
+          </form>
+        </div>
+
+        <div class="popup-success">
+          <h2>Заявка успешно отправлена</h2>
+          <p>Наши менеджеры свяжутся с вами в течение 24 часов</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Top Section -->
+    <section class="top bg-none">
+      <!-- logo -->
+      <div class="top__logo">
+        <img src="/img/logo.png" alt="logo" />
+      </div>
+
+      <!-- content -->
+      <div class="container">
+        <div class="top__title">
+          ЦЕНЫ
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="pricing">
+      <div class="container">
+        <div class="pricing__item">
+          <div class="pricing__title">
+            Дизайн интерьера
+          </div>
+          <ul class="pricing__list">
+            <li class="pricing__list-item">
+              <div class="pricing__text">
+                Дизайн проект (от 100 м2)
+              </div>
+              <div class="pricing__text">
+                17 тыс.руб за м2
+              </div>
+            </li>
+            <li class="pricing__list-item">
+              <div class="pricing__text">
+                Дизайн проект (от 100 м2)
+              </div>
+              <div class="pricing__text">
+                120 тыс.руб/месяц
+              </div>
+            </li>
+            <li class="pricing__list-item">
+              <div class="pricing__text">
+                Дизайн проект (от 100 м2)
+              </div>
+              <div class="pricing__text">
+                150 тыс.руб/месяц
+              </div>
+            </li>
+          </ul>
+          <div class="pricing__btn" onclick="openForm()">
+            Записаться на консультацию
+          </div>
+        </div>
+
+        <div class="pricing__item">
+          <div class="pricing__title">
+            Архитектура
+          </div>
+          <ul class="pricing__list">
+            <li class="pricing__list-item">
+              <div class="pricing__text">
+                Концепт
+              </div>
+              <div class="pricing__text">
+                от 6 тыс.руб за м2
+              </div>
+            </li>
+            <li class="pricing__list-item">
+              <div class="pricing__text">
+                Архитектурный Проект
+              </div>
+              <div class="pricing__text">
+                от 7 тыс.руб/месяц
+              </div>
+            </li>
+            <li class="pricing__list-item">
+              <div class="pricing__text">
+                Авторский надзор
+              </div>
+              <div class="pricing__text">
+                от 120 тыс.руб/месяц
+              </div>
+            </li>
+          </ul>
+          <div class="pricing__btn" onclick="openForm()">
+            Записаться на консультацию
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Оставить заявку -->
+    <footer class="footer">
+      <div class="container">
+        <!-- submit application -->
+        <div class="submit" onclick="openForm()">
+          <div class="submit__title">Оставить заявку</div>
+          <div class="submit__desc">
+            Позвоните нам или оставьте ваши контактные данные
+          </div>
+        </div>
+
+        <!-- content -->
+        <div class="content">
+          <div class="wrapper">
+            <div class="contacts">
+              <a href="#"> +7 988 736 20 56 </a>
+              <a href="#"> INFO@DESIGN-INTER.RU</a>
+            </div>
+            <div class="networks">
+              <a href="#">
+                <img src="/img/instagram.png" alt="" />
+              </a>
+              <a href="#">
+                <img src="/img/twitter.png" alt="" />
+              </a>
+              <a href="#">
+                <img src="/img/facebook.png" alt="" />
+              </a>
+              <a href="#">
+                <img src="/img/pinterest.png" alt="" />
+              </a>
+            </div>
+          </div>
+          <img class="content__logo" src="/img/logo.png" alt="" />
+        </div>
+      </div>
+    </footer>
+
+    <!-- script -->
+    <script src="/js/app.js"></script>
+  </body>
+</html>
