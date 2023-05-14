@@ -1,0 +1,39 @@
+.main {
+  width: 100%;
+  background: url(../img/main-bg.png) top/cover;
+}
+
+.experience {
+  padding: 125px 0 115px;
+  .container {
+    @include flex(center, flex-end, row, 115px);
+  }
+
+  &__text {
+    position: relative;
+    padding-left: 115px;
+    width: 920px;
+    @include flex(flex-start, center, column, 35px);
+
+    &::before {
+      @include before;
+      left: -20px;
+      width: 20px;
+      height: 215px;
+      background: #d3d3d3;
+    }
+  }
+
+  &__title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #d3d3d3;
+  }
+
+  &__desc {
+    width: 805px;
+    color: #929292;
+    font-size: 24px;
+    @include yeseva;
+  }
+}

@@ -1,0 +1,100 @@
+.services {
+  position: relative;
+  @include flex;
+
+  &::before {
+    @include before;
+    left: 0;
+    width: 515px;
+    height: 885px;
+    background: url(../img/services-logo.png) center/cover;
+    z-index: 2;
+  }
+
+  .container {
+    padding: 100px 0;
+    @include flex(flex-start, flex-start, column, 25px);
+
+    &::before {
+      @include before;
+      right: 0;
+      top: 0;
+      width: 100vw;
+      height: 100%;
+      background: #fff;
+    }
+  }
+
+  &__item {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    z-index: 2;
+    @include flex(center, flex-start);
+  }
+
+  &__text {
+    position: relative;
+    padding: 0 40px;
+    width: 555px;
+    height: 266px;
+    background: #fff;
+    @include flex(flex-start, center, column, 20px);
+    z-index: 2;
+
+    &:hover {
+      .services__arrow {
+        transform: translateX(20px);
+      }
+    }
+  }
+
+  &__title {
+    position: relative;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 43px;
+    letter-spacing: 0.14em;
+
+    .services__arrow {
+      right: -120px;
+      bottom: -5px;
+    }
+  }
+
+  &__desc {
+    position: relative;
+    color: #929292;
+    font-size: 24px;
+    @include times;
+
+    .services__arrow {
+      right: -140px;
+      bottom: 10px;
+    }
+  }
+
+  &__arrow {
+    position: absolute;
+    transition: 0.35s ease-in-out;
+  }
+
+  &__img {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 920px;
+    height: 100%;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+// .top,
+// .services {
+//   display: none;
+// }

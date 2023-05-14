@@ -1,0 +1,25 @@
+.guarantee {
+  padding: 100px 0;
+
+  .container {
+    @include flex(stretch, space-evenly, row, 20px);
+  }
+
+  &__item {
+    position: relative;
+    width: 380px;
+    @include flex(center, flex-start, column, 20px);
+  }
+
+  hr {
+    width: 10px;
+    background: #929292;
+  }
+
+  &__text {
+    color: #fff;
+    font-size: 24px;
+    text-align: center;
+    @include times;
+  }
+}
