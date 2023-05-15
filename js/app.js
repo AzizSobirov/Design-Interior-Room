@@ -50,9 +50,6 @@ function openForm() {
 function submitForm() {
   document.querySelector(".popup-form").style.display = "none";
   document.querySelector(".popup-success").style.display = "flex";
-  setTimeout(() => {
-    closePopup();
-  }, 3000);
 }
 
 function closePopup() {

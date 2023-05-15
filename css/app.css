@@ -271,7 +271,7 @@ iframe {
   top: 20px;
   right: 20px;
   width: 30px;
-  z-index: 2;
+  z-index: 9;
   cursor: pointer;
 }
 .popup-img {
